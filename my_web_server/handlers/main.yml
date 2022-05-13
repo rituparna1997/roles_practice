@@ -1,0 +1,4 @@
+---
+- name: restart and enable apache
+  shell: systemctl restart apache2
+  shell: systemctl enable apache2

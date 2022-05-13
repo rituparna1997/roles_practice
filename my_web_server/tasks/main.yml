@@ -1,0 +1,10 @@
+---
+  - name: update packages
+    shell: apt-get update
+  - name: install apache
+    shell: apt-get install apache2 -y
+  - name: copy files to remote node
+    template: src=templates/index.html dest={{ dest_path }}
+    notify: 
+    - restart and enable apache
+# tasks file for my_web_server
